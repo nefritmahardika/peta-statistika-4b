@@ -85,7 +85,12 @@
 				.setLatLng(e.latlng)
 				.setContent(`You clicked the map at ${e.latlng.toString()}`)
 				.openOn(map);
-      }
+
+      // function onMapClick(e) {
+      //   const randomValue = Math.floor(Math.random() * 10) + 1;
+      //   const popupText = `Kecelakaan: ${randomValue}`;
+      //   L.popup().setLatLng(e.latlng).setContent(popupText).openOn(map);
+      // }
 
       map.on("click", onMapClick);
     </script>
