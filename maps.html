@@ -76,21 +76,9 @@
         L.marker(marker.position).addTo(map).bindPopup(marker.popupText);
       });
 
-      const popup = L.popup()
-			.setLatLng([-7.9778, 112.63493]).setContent('Kota Malang')
-			.openOn(map);
-
       function onMapClick(e) {
-        popup
-				.setLatLng(e.latlng)
-				.setContent(`You clicked the map at ${e.latlng.toString()}`)
-				.openOn(map);
-
-      // function onMapClick(e) {
-      //   const randomValue = Math.floor(Math.random() * 10) + 1;
-      //   const popupText = `Kecelakaan: ${randomValue}`;
-      //   L.popup().setLatLng(e.latlng).setContent(popupText).openOn(map);
-      // }
+        L.popup().setLatLng(e.latlng).setContent(`You clicked the map at ${e.latlng.toString()}`).openOn(map);
+      }
 
       map.on("click", onMapClick);
     </script>
